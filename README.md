@@ -75,6 +75,8 @@ Another modern way of writing functions is by using something called an _arrow f
 const myFunction = () => { ... };
 ```
 
+One thing to keep in mind when using these modern solutions is that you can still use the `()` just as before where you store your arguments that pass to the function for usage within the function block. So `function myFunction(x, y)...` are served the same way in `const myFunction = (x, y) => ...`. One key difference here is that when using arrow functions, there is no need to use `()` when only one argument is being used, so `const myFunction = x => ...` works just fine.
+
 # Strings
 
 # Numbers
