@@ -137,13 +137,13 @@ You can also break template strings across different lines as well. Simply use t
 **Multi-line String**
 
 ```
-const text = \`\`\`
+const text = `` ` `` `` ` `` `` ` ``
 This
 is
 on
 separate
 lines
-\`\`\`
+`` ` `` `` ` `` `` ` ``
 ```
 
 # Numbers
