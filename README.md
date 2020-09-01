@@ -15,8 +15,8 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 7. [Conditional Statements](#Conditional-Statements)
 8. [Control Flow](#Control-Flow)
 9. [Classes (for OOP)](#Classes)
-10. [Import & Export (CommonJS vs ES6 Modules)](#Import-&-Export)
-11. [Async/Await](#Async/Await)
+10. [Import & Export (CommonJS vs ES6 Modules)](#Import-and-Export)
+11. [Async/Await](#Async-and-Await)
 12. [More coming soon...](#More-Coming-Soon!)
 
 # Variables
@@ -37,8 +37,8 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 
 # Classes
 
-# Import & Export
+# Import and Export
 
-# Async/Await
+# Async and Await
 
 # More Coming Soon!
