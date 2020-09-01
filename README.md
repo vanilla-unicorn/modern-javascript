@@ -77,6 +77,24 @@ const myFunction = () => { ... };
 
 One thing to keep in mind when using these modern solutions is that you can still use the `()` just as before where you store your arguments that pass to the function for usage within the function block. So `function myFunction(x, y)...` are served the same way in `const myFunction = (x, y) => ...`. One key difference here is that when using arrow functions, there is no need to use `()` when only one argument is being used, so `const myFunction = x => ...` works just fine.
 
+## Returning from Functions
+
+Typically, if you're used to working with legacy functions in JavaScript, you may be used to simply using the `return` keyword with something that is returned. But with modern JavaScript, there are implicit and explicit returns. That means that if you're returning something from a small function, you can optimize the readability of the code by consolidating the function to a single line by omitting the `return` keyword entirely. Keep in mind though that explicit returns are still used regularly, so get some practice in with using implicit returns.
+
+**Explicit Return**
+
+```
+const myFunction = () => {
+    return true;
+}
+```
+
+**Implicit Return**
+
+```
+const myFunction = () => true;
+```
+
 # Strings
 
 # Numbers
