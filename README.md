@@ -26,7 +26,7 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 At this point, the `var` keyword is considered legacy and will eventually get phased out once a bit of time has passed. Once that happens, anyone using the `var` keyword in their application will need to update their application code or simply deal with the fact that their application won't operate correctly in more modern browsers that support the latest versions of JavaScript. It's a best practice now to use the appropriate keyword `let` or `const` in its place.
 
 ```
-~~var legacyVariable = 'some string';~~
+var legacyVariable = 'some string';
 ```
 
 ## let
