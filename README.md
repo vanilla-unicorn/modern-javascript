@@ -17,7 +17,7 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 9. [Classes (for OOP)](#Classes)
 10. [Import & Export (CommonJS vs ES6 Modules)](#Import-and-Export)
 11. [Async/Await](#Async-and-Await)
-12. [More coming soon...](#More-Coming-Soon!)
+12. [More coming soon...](#More-Coming-Soon)
 
 # Variables
 
@@ -41,4 +41,4 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 
 # Async and Await
 
-# More Coming Soon!
+# More Coming Soon
