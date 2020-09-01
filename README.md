@@ -19,6 +19,8 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 11. [Async/Await](#Async-and-Await)
 12. [More coming soon...](#More-Coming-Soon)
 
+---
+
 # Variables
 
 ## var
@@ -97,7 +99,54 @@ const myFunction = () => true;
 
 # Strings
 
+## Template Strings
+
+Strings have evolved a bit with the newer versions of JavaScript. They've since introduced _template strings_ which give you a bit more control over how you use strings. Gone are the days where you are adding strings to concatenate them. And you no longer need to handle breaking a string up in order to provide a string as a block of text using spaces and `<br/>` tags (though `<br/>` tags are still useful on a regular basis for other things).
+
+**Regular String**
+
+```
+const myString = 'Some String';
+const myDoubleQuotedString = "Some String";
+```
+
+**Template String**
+
+```
+const myString = `Some String`;
+```
+
+Ensure that you are using backticks (`\``) rather than single quotes. It's pretty often that you might forget that you're working with a template string and see an error and scratch your head for a minute or two before remembering that it's a template string that uses backticks. You'll get used to it though.
+
+## Interpolation
+
+Another key feature of template strings is the ability to interpolate the string with some data. Remember above when I mentioned not needing to concatenate stringe with the `+` operator anymore. Yeah, this is what I mean. Instead of using the `+` operator, all you need to do is add a formatter to the template string that follows the `${...}` syntax. Simply adding this to the inside of the string where you want to add the data you are interpolating will handle the issue with ease and in a much easier to read syntax.
+
+**Interpolated Template String**
+
+```
+const hello = 'Hello';
+const world = 'World!';
+const myInterpolatedString = `${hello} ${world}`; // gives you 'Hello World!'
+```
+
 # Numbers
+
+There isn't much here to remember other than the two methods, `parseInt()` (also `parseFloat()` if you're dealing with floating points - seems to be used for doubles as well so use what is best for you) and `toString()`. I've heard that `toString()` will eventually be phased out, but I haven't seen anything definitive about that in writing so it could just be conjecture, so take it as that for now.
+
+**Parsing an Integer**
+
+```
+const numberAsString = '99';
+const actualNumber = parseInt(numberAsString); // gives you 99 - no quotes so it isn't a string
+```
+
+**Number to String**
+
+```
+const number = 99;
+const numberAsString = number.toString(); // gives you "99" - usually expressed with double quotes but either way, still a string
+```
 
 # Arrays
 
