@@ -116,7 +116,7 @@ const myDoubleQuotedString = "Some String";
 const myString = `Some String`;
 ```
 
-Ensure that you are using backticks (`\``) rather than single quotes. It's pretty often that you might forget that you're working with a template string and see an error and scratch your head for a minute or two before remembering that it's a template string that uses backticks. You'll get used to it though.
+Ensure that you are using backticks (\`) rather than single quotes. It's pretty often that you might forget that you're working with a template string and see an error and scratch your head for a minute or two before remembering that it's a template string that uses backticks. You'll get used to it though.
 
 ## Interpolation
 
@@ -128,6 +128,22 @@ Another key feature of template strings is the ability to interpolate the string
 const hello = 'Hello';
 const world = 'World!';
 const myInterpolatedString = `${hello} ${world}`; // gives you 'Hello World!'
+```
+
+## Multi-line Strings
+
+You can also break template strings across different lines as well. Simply use three backticks to open and close a text block.
+
+**Multi-line String**
+
+```
+const text = \`\`\`
+This
+is
+on
+separate
+lines
+\`\`\`
 ```
 
 # Numbers
