@@ -49,6 +49,32 @@ const PORT = 8081;
 
 # Functions
 
+## Functions as Variables
+
+One pretty neat thing about functions in JavaScript is that they can be set to variables. This is due to them essentially being classified as objects in JavaScript since virtually everything is an object in JavaScript. This neat aspect of JavaScript has bred an entirely efficient usage of functions in JavaScript and given birth to some cool usage relating to them.
+
+**Old Way (still used)**
+
+```
+function myFunction() { ... }
+```
+
+Make sure you know how to use functions without names, called _anonymous functions_, because you're going to be using them quite often when you're writing more modern JavaScript (they are also used quite regularly in legacy JavaScript as well for purposes like callbacks).
+
+**Anonymous Function as Variable**
+
+```
+const myFunction = function() { ... };
+```
+
+Another modern way of writing functions is by using something called an _arrow function_ which is pretty much a regular function, just written with a slightly different syntax, `() => { ... }`. Using them just as they are, they serve as anonymous functions, but when used with variables, they then serve a purpose closer to that of the above _anonymous function as variable_. This is also one of the most common forms of defining functions now within modern JavaScript.
+
+**Arrow Function as Variable**
+
+```
+const myFunction = () => { ... };
+```
+
 # Strings
 
 # Numbers
