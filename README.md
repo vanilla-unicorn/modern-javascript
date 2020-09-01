@@ -144,7 +144,6 @@ on
 separate
 lines
 ```
-```
 
 # Numbers
 
