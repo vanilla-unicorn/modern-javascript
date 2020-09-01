@@ -37,7 +37,7 @@ You should have a good understanding of variable scoping within the global and f
 let myChangableVariable = 'some string';
 ```
 
-A really common and good example that many interviewers will ask about are relating to how to use `let` within a `for` loop. Previously, working with `for` loops, when you set the `var i = 0` of the `for` loop, that `i` was recognized at a hoisted level which could create issues at a global scope since you might have numerous `i` variables due to numerous `for` loops. This issue essentially no longer exists due to the fact that using `let` in place of `var` results in `let i = 0` limiting the scope to that specific use-case and if housed within a function, is only hoisted to the top of that function at worst. Generally, you'd only see that scope set to the loop. This is a good piece of info to keep in mind when interview time comes around.
+A really common and good use-case example that many interviewers will ask about are relating to how to use `let` within a `for` loop. Previously, working with `for` loops, when you set the `var i = 0` of the `for` loop, that `i` was recognized at a hoisted level which could create issues at a global scope since you might have numerous `i` variables due to numerous `for` loops. This issue essentially no longer exists due to the fact that using `let` in place of `var` results in `let i = 0` limiting the scope to that specific use-case and if housed within a function, is only hoisted to the top of that function at worst. Generally, you'd only see that scope set to the loop. This is a good piece of info to keep in mind when interview time comes around.
 
 ## const
 
