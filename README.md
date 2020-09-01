@@ -132,18 +132,7 @@ const myInterpolatedString = `${hello} ${world}`; // gives you 'Hello World!'
 
 ## Multi-line Strings
 
-You can also break template strings across different lines as well. Simply use three backticks to open and close a text block.
-
-**Multi-line String**
-
-````
-const text = ```
-This
-is
-on
-separate
-lines
-```
+You can also break template strings across different lines as well. Simply use three backticks (```) to open and close a text block.
 
 # Numbers
 
@@ -182,5 +171,7 @@ const numberAsString = number.toString(); // gives you "99" - usually expressed 
 # Async and Await
 
 # More Coming Soon
+
 ```
-````
+
+```
