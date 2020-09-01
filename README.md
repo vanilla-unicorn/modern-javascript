@@ -136,14 +136,14 @@ You can also break template strings across different lines as well. Simply use t
 
 **Multi-line String**
 
-```
-const text = `` ` `` `` ` `` `` ` ``
+````
+const text = ```
 This
 is
 on
 separate
 lines
-`` ` `` `` ` `` `` ` ``
+```
 ```
 
 # Numbers
@@ -153,15 +153,19 @@ There isn't much here to remember other than the two methods, `parseInt()` (also
 **Parsing an Integer**
 
 ```
+
 const numberAsString = '99';
 const actualNumber = parseInt(numberAsString); // gives you 99 - no quotes so it isn't a string
+
 ```
 
 **Number to String**
 
 ```
+
 const number = 99;
 const numberAsString = number.toString(); // gives you "99" - usually expressed with double quotes but either way, still a string
+
 ```
 
 # Arrays
@@ -179,3 +183,5 @@ const numberAsString = number.toString(); // gives you "99" - usually expressed 
 # Async and Await
 
 # More Coming Soon
+```
+````
