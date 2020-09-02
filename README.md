@@ -12,12 +12,11 @@ The purpose here is to keep the information grouped based on the relevance. I'm 
 4. [Numbers](#Numbers)
 5. [Arrays](#Arrays)
 6. [Objects](#Objects)
-7. [Conditional Statements](#Conditional-Statements)
-8. [Control Flow](#Control-Flow)
-9. [Classes (for OOP)](#Classes)
-10. [Import & Export (CommonJS vs ES6 Modules)](#Import-and-Export)
-11. [Async/Await](#Async-and-Await)
-12. [More coming soon...](#More-Coming-Soon)
+7. [Control Flow](#Control-Flow)
+8. [Classes (for OOP)](#Classes)
+9. [Import & Export (CommonJS vs ES6 Modules)](#Import-and-Export)
+10. [Async/Await](#Async-and-Await)
+11. [More coming soon...](#More-Coming-Soon)
 
 ---
 
@@ -158,11 +157,91 @@ const numberAsString = number.toString(); // gives you "99" - usually expressed 
 
 # Arrays
 
+Arrays are a data type that you're likely to use pretty often so get comfortable with the different array methods, new and old. Being able to filter an array by specific results is helpful using the `.filter()` callback. It'll return a new array with the results so it's indespensible when working with _pure functions - functions that don't mutate state or the input provided_.
+
+**Array Filtering**
+
+```
+const grades = [ 90, 58, 93, 0, 80 ];
+// Get passing grades that are above a 79
+const passingGrades = grades.filter(grade => grade > 79); // gives you [ 90, 93, 80 ]
+```
+
+Checking an array for any occurrence of a specific value is also helpful. This can be done with strings in a similar way since strings are simply an array of characters (usually checking for a specific substring) using the `.includes(some_value)` method.
+
+**Checking Array for Value**
+
+```
+const statesVisited = ["Florida", "New York", "Virginia", "California" ];
+const hasVisitedTexas = statesVisited.includes("Texas"); // gives boolean value of false
+```
+
+Another helpful pair of methods are the `.join('some_string')` and `.split('some_string')` methods that allow you to create a string from an array of values or split a string into an array with some kind of separator.
+
+**Join Array Values**
+
+```
+const statesVisited = ["Florida", "New York", "Virginia", "California" ];
+const statesVisitedAsString = statesVisited.join(','); // gives you "Florida, New York, Virginia, California"
+const placesVisitedInUsa = `I've visited ${statesVisitedAsString}.`; // interpolating value into string works nicely
+```
+
+**Splitting String into Array**
+
+```
+const code = "G3ZS3-3FDW3-FEAG3-G94E8";
+const codeBrokenUp = code.split('-'); // gives you ["G3ZS3", "3FDW3", "FEAG3", "G94E8" ]
+```
+
+The last method here I'll cover, though there are more for arrays, is going to be something you use a **LOT** if you're working with a framework, like React.js. Typically when iterating through an array of values that need to be rendered within their own components, for example. You do this with the `.map()` method.
+
+**Mapping Array Values**
+
+```
+const itemArray = ["cheese", "bread", "mayo", "ham" ];
+itemArray.map((item, index) => <SomeComponent key={index} value={item} />) // React.js example rendering component from values
+```
+
 # Objects
 
-# Conditional Statements
+Objects are at the core of the JavaScript language and it is helpful to know a couple of methods when working with them since you'll often need to iterate through keys and values of an object at some points. Previously, this was a pain because you needed to loop and set an array where the values were equal to the keys or values of the object. That's since been simplified using both the `Object.keys()` and `Object.values()` methods.
+
+**Get Object Keys**
+
+```
+const person = { name: "Jimbo", age: 43, is_famous: false };
+const personKeys = Object.keys(person); // gives you [ "name", "age", "is_famous" ]
+```
+
+**Get Object Values**
+
+```
+const person = { name: "Jimbo", age: 43, is_famous: false };
+const personValues = Object.values(person); // gives you [ "Jimbo", 43, false ]
+```
 
 # Control Flow
+
+Remember that readability is important when working with other developers. And refactoring is a key aspect of the work you're doing so you'll want to prevent yourself from writing insanely long `if else` statements. One way of avoiding this is to break those statements up by their respective logic, where the only time you're using a block (`{...}`) is when it's absolutely unavoidable. That'll help you with your ability to generate _one-liners_ that can solve issues in a more efficient manner. This helps you to reach for that senior level developer style of development as well.
+
+**Normal Conditional**
+
+```
+const isOnVacation = true;
+if (isOnVacation) {
+    return true;
+} else {
+    return false;
+}
+```
+
+**More Optimal Conditional**
+
+```
+const isOnVacation = true;
+if (!isOnVacation) return false;
+return true;
+```
 
 # Classes
 
