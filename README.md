@@ -253,6 +253,92 @@ When working with OOP in JavaScript, make sure you understand how classes work i
 
 # Import and Export
 
+There are only really two (really three) ways of importing and exporting you're likely going to work with when dealing with frontend frameworks or server-side JavaScript. On the frontend, you'll more than likely be working with _modules_. This is especially true for _React_. You'll want to know how to export individual things or exporting as default. Importing, you'll need to know named imports (using brackets) and importing as a default module.
+
+**Module Named Export**
+
+```
+export const someVariable = "some string";
+```
+
+**Module Named Import**
+
+```
+import { someVariable } from './someFile';
+```
+
+**Module Default Export**
+
+```
+const someVariable = "some string";
+export default someVariable;
+```
+
+**Module Default Import**
+
+```
+import someVariable from './someFile';
+```
+
+When working within Node.js, you'll more often be working with CommonJS type imports and exports so you'll need to keep an eye on this if you're a full stack engineer flip-flopping between the client and server as the syntax is a bit different. Note that Node.js doesn't specifically use the exact same CommonJS syntax for exports, rather it makes use of `module.exports` rather than `exports`, but you can use `exports` where necessary, such as when attaching different controller methods for use in a router.
+
+**CommonJS Style Exports**
+
+```
+exports.someMethod = async (req, res) => res.send('yay!');
+```
+
+**CommonJS Style Imports**
+
+```
+import { someMethod } from './someFile';
+```
+
+**CommonJS-esque Exports**
+
+```
+const someVariable = "some string";
+module.exports = someVariable;
+```
+
+**CommonJS-esque Imports**
+
+```
+import someVariable from './someFile';
+```
+
 # Async and Await
 
+This is such an important part of JavaScript now, that it's critical to learn. Promises have become a core component of JavaScript and _Async/Await_ have become the overlay for them, making them far more readable and maintainable. You might have heard the term, _promise hell_ or _callback hell_ and this referenced the convoluted nature of callbacks being passed from one promise callback down to the next before resolving the promise. This has since been replaced by _Async/Await_ "syntactic sugar" which is just a simple way of saying, promises are easier to use now. The only thing with this new syntax to pay attention to is when to set a function as returning a promise using the _async_ keyword. It's quite normal to not get a promise returned and be left scratching your head troubleshooting a function that you later find out was simply missing this keyword. Also make sure to use the _await_ keyword when you're planning on waiting for some task to complete before moving on. If you misuse this, you might find that the output from your functions are different than you were expecting because of JavaScript running procedurally rather than asyncronously.
+
+**Callback Hell Promise Syntax**
+
+```
+const apiCall = () => {
+    return new Promise((resolve, reject) => {
+        return fetch('https://whatever.com', ...)
+        .then(response => response.json())
+        .then(result => resolve(result))
+        .catch(err => reject(err));
+    });
+}
+```
+
+**Async/Await Syntax**
+
+```
+const apiCall = async () => {
+    try {
+        const response = await fetch('https://whatever.com', ...);
+        const result = response.json();
+        return result;
+    } catch (err) {
+        console.log(err);
+        return err;
+    }
+}
+```
+
 # More Coming Soon
+
+I'll get around to adding a bit more here and I may migrate this over to a blog post as well. For now, feel free to fork and add in some pull requests if you feel like it to help improve this list. Hope you found it helpful and informative! :)
