@@ -247,12 +247,12 @@ Another key aspect of this that you should be keeping in mind (though slightly o
 
 # Classes
 
+_Object Oriented Programming (OOP)_ is a staple of programming paradigms. And while it's since been in stark contrast to the more widely used _Functional Programming_ as of late due to its use in popular frameworks like _React_, it is still the most widely used paradigm in programming as a whole. There's good reason for this so make sure you're noting these different paradigms and their best use-cases.
+
+When working with OOP in JavaScript, make sure you understand how classes work in JavaScript (that they are essentially just glorified objects), how to create constructors, how to work with the class prototype if necessary (sometimes better than instance methods), how to create getters and setters, and how prototypical inheritence works. These things will come in handy when working with frameworks and libraries to understand what's going on under the hood.
+
 # Import and Export
 
 # Async and Await
 
 # More Coming Soon
-
-```
-
-```
